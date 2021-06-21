@@ -118,7 +118,7 @@ Partial Class Home
         '
         'PictureBox8
         '
-        Me.PictureBox8.Image = Global.CapesPlusInstaller.My.Resources.Resources.CloaksPlusText
+
         Me.PictureBox8.Location = New System.Drawing.Point(195, 12)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(75, 75)
@@ -213,7 +213,7 @@ Partial Class Home
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = Global.CapesPlusInstaller.My.Resources.Resources.CloaksPlusText
+
         Me.PictureBox4.Location = New System.Drawing.Point(182, 12)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(75, 75)
@@ -309,7 +309,7 @@ Partial Class Home
         '
         'PictureBox6
         '
-        Me.PictureBox6.Image = Global.CapesPlusInstaller.My.Resources.Resources.CloaksPlusText
+        Me.PictureBox6.Image = Global.CapesPlusInstaller.My.Resources.Resources.CapesPlusText
         Me.PictureBox6.Location = New System.Drawing.Point(182, 48)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(75, 75)
@@ -397,7 +397,7 @@ Partial Class Home
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.CapesPlusInstaller.My.Resources.Resources.CloaksPlusText
+        Me.PictureBox1.Image = Global.CapesPlusInstaller.My.Resources.Resources.CapesPlusText
         Me.PictureBox1.Location = New System.Drawing.Point(56, -7)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(75, 75)

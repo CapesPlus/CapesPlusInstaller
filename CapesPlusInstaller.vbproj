@@ -139,7 +139,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CloaksPlusText.png" />
+    <None Include="Resources\CapesPlusText.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Line.png" />
