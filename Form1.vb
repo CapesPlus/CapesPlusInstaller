@@ -129,34 +129,13 @@ Public Class Form1
 
         cpeUsersLbl.Text = "Capes+ Users: " + resUsers
         FlatLabel6.Text = "Capes+ Users: " + resUsers
+        FlatLabel3.Text = "Version: 1.2.0"
 
-
-        Dim verURL As String = "http://35.225.73.246/installer/version.php"
-
-
-        Dim wc As New System.Net.WebClient
-        Dim version As String = wc.DownloadString(verURL)
-        FlatLabel3.Text = "Version: " + status.Text.Replace("Version: ", "")
-        If Not status.Text.Replace("Version: ", "") = version Then
-            'New update avaliable.
-            Dim result As DialogResult = MessageBox.Show("There is A New Update! Would You Like To Update It.", "Outdated Version", MessageBoxButtons.YesNo)
-
-            If (result = DialogResult.Yes) Then
-                Me.Hide()
-                updater.ShowDialog()
-
-            ElseIf (result = DialogResult.No) Then
-
-            End If
-
-        End If
 
     End Sub
 
 
     Public Function FileLocation() As String
-
-
         Return Environment.GetFolderPath(Environment.SpecialFolder.System) + "/drivers/etc/hosts"
     End Function
 
@@ -235,13 +214,6 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub FlatLabel3_Click(sender As Object, e As EventArgs) Handles FlatLabel3.Click
-
-    End Sub
-
-    Private Sub FlatLabel4_Click(sender As Object, e As EventArgs) Handles FlatLabel4.Click
-
-    End Sub
 
     Private Sub FlatButton5_Click(sender As Object, e As EventArgs) Handles FlatButton5.Click
         Process.Start("https://discord.gg/bYwR786kPf")

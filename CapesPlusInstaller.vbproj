@@ -51,7 +51,7 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>CloaksPlus.ico</ApplicationIcon>
+    <ApplicationIcon>CapesPlus.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -110,12 +110,6 @@
     <Compile Include="Theme.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="updater.Designer.vb">
-      <DependentUpon>updater.vb</DependentUpon>
-    </Compile>
-    <Compile Include="updater.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -129,9 +123,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="updater.resx">
-      <DependentUpon>updater.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -160,7 +151,7 @@
     <None Include="Resources\success.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CloaksPlus.ico" />
+    <Content Include="CapesPlus.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
