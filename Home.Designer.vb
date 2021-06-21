@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Home
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,9 +22,14 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.FormSkin1 = New CapesPlusInstaller.FormSkin()
         Me.pnlCredits = New System.Windows.Forms.Panel()
+        Me.FlatButton1 = New CapesPlusInstaller.FlatButton()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.FlatLabel2 = New CapesPlusInstaller.FlatLabel()
+        Me.FlatButton5 = New CapesPlusInstaller.FlatButton()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.pnlInstall = New System.Windows.Forms.Panel()
         Me.uninstallBtn = New CapesPlusInstaller.FlatButton()
         Me.FlatLabel1 = New CapesPlusInstaller.FlatLabel()
@@ -47,13 +52,10 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FlatClose1 = New CapesPlusInstaller.FlatClose()
         Me.status = New CapesPlusInstaller.FlatStatusBar()
-        Me.FlatButton1 = New CapesPlusInstaller.FlatButton()
-        Me.FlatLabel2 = New CapesPlusInstaller.FlatLabel()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.FlatButton5 = New CapesPlusInstaller.FlatButton()
         Me.FormSkin1.SuspendLayout()
         Me.pnlCredits.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlInstall.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,8 +65,6 @@ Partial Class Form1
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FormSkin1
@@ -101,6 +101,66 @@ Partial Class Form1
         Me.pnlCredits.Name = "pnlCredits"
         Me.pnlCredits.Size = New System.Drawing.Size(450, 301)
         Me.pnlCredits.TabIndex = 7
+        '
+        'FlatButton1
+        '
+        Me.FlatButton1.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton1.BaseColor = System.Drawing.Color.RoyalBlue
+        Me.FlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton1.Font = New System.Drawing.Font("LOVES", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FlatButton1.Location = New System.Drawing.Point(107, 222)
+        Me.FlatButton1.Name = "FlatButton1"
+        Me.FlatButton1.Rounded = False
+        Me.FlatButton1.Size = New System.Drawing.Size(262, 48)
+        Me.FlatButton1.TabIndex = 12
+        Me.FlatButton1.Text = "TikTok"
+        Me.FlatButton1.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = Global.CapesPlusInstaller.My.Resources.Resources.CloaksPlusText
+        Me.PictureBox8.Location = New System.Drawing.Point(195, 12)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(75, 75)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 9
+        Me.PictureBox8.TabStop = False
+        '
+        'FlatLabel2
+        '
+        Me.FlatLabel2.AutoSize = True
+        Me.FlatLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.FlatLabel2.Font = New System.Drawing.Font("LOVES", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FlatLabel2.ForeColor = System.Drawing.Color.White
+        Me.FlatLabel2.Location = New System.Drawing.Point(191, 112)
+        Me.FlatLabel2.Name = "FlatLabel2"
+        Me.FlatLabel2.Size = New System.Drawing.Size(89, 20)
+        Me.FlatLabel2.TabIndex = 11
+        Me.FlatLabel2.Text = "Socials"
+        '
+        'FlatButton5
+        '
+        Me.FlatButton5.BackColor = System.Drawing.Color.Transparent
+        Me.FlatButton5.BaseColor = System.Drawing.Color.RoyalBlue
+        Me.FlatButton5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.FlatButton5.Font = New System.Drawing.Font("LOVES", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FlatButton5.Location = New System.Drawing.Point(107, 154)
+        Me.FlatButton5.Name = "FlatButton5"
+        Me.FlatButton5.Rounded = False
+        Me.FlatButton5.Size = New System.Drawing.Size(262, 48)
+        Me.FlatButton5.TabIndex = 8
+        Me.FlatButton5.Text = "Discord"
+        Me.FlatButton5.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = Global.CapesPlusInstaller.My.Resources.Resources.Line
+        Me.PictureBox7.Location = New System.Drawing.Point(142, 72)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(189, 33)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 10
+        Me.PictureBox7.TabStop = False
         '
         'pnlInstall
         '
@@ -370,68 +430,8 @@ Partial Class Form1
         Me.status.ShowTimeDate = False
         Me.status.Size = New System.Drawing.Size(3000, 23)
         Me.status.TabIndex = 1
-        Me.status.Text = "Version: 1.1.0"
+        Me.status.Text = "Version: 1.2.0"
         Me.status.TextColor = System.Drawing.Color.White
-        '
-        'FlatButton1
-        '
-        Me.FlatButton1.BackColor = System.Drawing.Color.Transparent
-        Me.FlatButton1.BaseColor = System.Drawing.Color.RoyalBlue
-        Me.FlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FlatButton1.Font = New System.Drawing.Font("LOVES", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FlatButton1.Location = New System.Drawing.Point(107, 222)
-        Me.FlatButton1.Name = "FlatButton1"
-        Me.FlatButton1.Rounded = False
-        Me.FlatButton1.Size = New System.Drawing.Size(262, 48)
-        Me.FlatButton1.TabIndex = 12
-        Me.FlatButton1.Text = "TikTok"
-        Me.FlatButton1.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
-        '
-        'FlatLabel2
-        '
-        Me.FlatLabel2.AutoSize = True
-        Me.FlatLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.FlatLabel2.Font = New System.Drawing.Font("LOVES", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FlatLabel2.ForeColor = System.Drawing.Color.White
-        Me.FlatLabel2.Location = New System.Drawing.Point(191, 112)
-        Me.FlatLabel2.Name = "FlatLabel2"
-        Me.FlatLabel2.Size = New System.Drawing.Size(89, 20)
-        Me.FlatLabel2.TabIndex = 11
-        Me.FlatLabel2.Text = "Socials"
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = Global.CapesPlusInstaller.My.Resources.Resources.Line
-        Me.PictureBox7.Location = New System.Drawing.Point(142, 72)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(189, 33)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox7.TabIndex = 10
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = Global.CapesPlusInstaller.My.Resources.Resources.CloaksPlusText
-        Me.PictureBox8.Location = New System.Drawing.Point(195, 12)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(75, 75)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox8.TabIndex = 9
-        Me.PictureBox8.TabStop = False
-        '
-        'FlatButton5
-        '
-        Me.FlatButton5.BackColor = System.Drawing.Color.Transparent
-        Me.FlatButton5.BaseColor = System.Drawing.Color.RoyalBlue
-        Me.FlatButton5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.FlatButton5.Font = New System.Drawing.Font("LOVES", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FlatButton5.Location = New System.Drawing.Point(107, 154)
-        Me.FlatButton5.Name = "FlatButton5"
-        Me.FlatButton5.Rounded = False
-        Me.FlatButton5.Size = New System.Drawing.Size(262, 48)
-        Me.FlatButton5.TabIndex = 8
-        Me.FlatButton5.Text = "Discord"
-        Me.FlatButton5.TextColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(243, Byte), Integer))
         '
         'Form1
         '
@@ -448,6 +448,8 @@ Partial Class Form1
         Me.FormSkin1.ResumeLayout(False)
         Me.pnlCredits.ResumeLayout(False)
         Me.pnlCredits.PerformLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlInstall.ResumeLayout(False)
         Me.pnlInstall.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -460,8 +462,6 @@ Partial Class Form1
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

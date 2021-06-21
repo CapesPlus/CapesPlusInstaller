@@ -1,11 +1,13 @@
 ﻿Imports System.IO
 Imports System.Runtime.InteropServices
 
-Public Class Form1
+Public Class Home
 
     Dim errorB As Boolean = False
     Dim title As String = ""
     Dim msg As String = ""
+    Dim loc As New Point(213, 64)
+    Dim loc2 As New Point(213, 398)
 
 
     <DllImport("gdi32")>
@@ -20,10 +22,7 @@ Public Class Form1
     Shared Function WriteProfileString(ByVal lpszSection As String, ByVal lpszKeyName As String, ByVal lpszString As String) As Integer
     End Function
 
-
-
-
-    Public Function showMsg(err As Boolean, title As String, msg As String)
+    Public Sub showMsg(err As Boolean, title As String, msg As String)
         If err Then
             Message.pbError.Show()
             Message.pbSuccess.Hide()
@@ -31,21 +30,48 @@ Public Class Form1
             Message.pbSuccess.Show()
             Message.pbError.Hide()
         End If
-
         Message.msgLbl.Text = msg
         Message.titleLbl.Text = title
         Message.ShowDialog()
-    End Function
+    End Sub
 
-    Dim loc As New Point(213, 64)
-    Dim loc2 As New Point(213, 398)
+    Private Sub BeautifyForm()
+        Me.Size = New Size(675, 400)
+        Dim Xpos As Integer = (Panel1.Width / 2) - (PictureBox1.Width / 2)
+        Me.PictureBox1.Location = New Point(Xpos, 0)
+        Dim Xpos1 As Integer = (pnlInstall.Width / 2) - (PictureBox4.Width / 2)
+        PictureBox4.Location = New Point(Xpos1, PictureBox4.Location.Y)
+        Dim Xpos2 As Integer = (pnlInstall.Width / 2) - (PictureBox3.Width / 2)
+        PictureBox3.Location = New Point(Xpos2, PictureBox3.Location.Y)
+        Dim Xpos3 As Integer = (pnlInstall.Width / 2) - (FlatLabel1.Width / 2)
+        FlatLabel1.Location = New Point(Xpos3, FlatLabel1.Location.Y)
+        Dim Xpos4 As Integer = (pnlInstall.Width / 2) - (InstallBtn.Width / 2)
+        InstallBtn.Location = New Point(Xpos4, InstallBtn.Location.Y)
+        Dim Xpos5 As Integer = (pnlInstall.Width / 2) - (uninstallBtn.Width / 2)
+        uninstallBtn.Location = New Point(Xpos5, uninstallBtn.Location.Y)
+        Dim Xpos6 As Integer = (pnlHome.Width / 2) - (FlatLabel6.Width / 2)
+        FlatLabel6.Location = New Point(Xpos6 - 16, FlatLabel6.Location.Y)
+        Dim Xpos7 As Integer = (pnlHome.Width / 2) - (FlatLabel3.Width / 2)
+        FlatLabel3.Location = New Point(Xpos7 + 33, FlatLabel3.Location.Y)
+        Dim Xpos9 As Integer = (pnlHome.Width / 2) - (PictureBox5.Width / 2)
+        PictureBox5.Location = New Point(Xpos9, PictureBox5.Location.Y)
+        Dim Xpos10 As Integer = (pnlHome.Width / 2) - (PictureBox6.Width / 2)
+        PictureBox6.Location = New Point(Xpos10, PictureBox6.Location.Y)
+        Dim Xpos11 As Integer = (pnlCredits.Width / 2) - (PictureBox8.Width / 2)
+        PictureBox8.Location = New Point(Xpos11, PictureBox8.Location.Y)
+        Dim Xpos12 As Integer = (pnlCredits.Width / 2) - (PictureBox7.Width / 2)
+        PictureBox7.Location = New Point(Xpos12, PictureBox7.Location.Y)
+        Dim Xpos13 As Integer = (pnlCredits.Width / 2) - (FlatLabel2.Width / 2)
+        FlatLabel2.Location = New Point(Xpos13, FlatLabel2.Location.Y)
+        Dim Xpos14 As Integer = (pnlCredits.Width / 2) - (FlatButton1.Width / 2)
+        FlatButton1.Location = New Point(Xpos14, FlatButton1.Location.Y)
+        Dim Xpos15 As Integer = (pnlCredits.Width / 2) - (FlatButton5.Width / 2)
+        FlatButton5.Location = New Point(Xpos15, FlatButton5.Location.Y)
+    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-        If System.IO.File.Exists("C:\Windows\Fonts\LOVES.ttf") Then
-        Else
-
+        BeautifyForm()
+        If Not System.IO.File.Exists("C:\Windows\Fonts\LOVES.ttf") Then
             Try
                 My.Computer.Network.DownloadFile("http://35.225.73.246/installer/LOVES.TTF", "C:\Windows\Fonts\LOVES.ttf")
                 Dim Ret As Integer
@@ -63,65 +89,8 @@ Public Class Form1
             Catch ex As Exception
 
             End Try
-            '
         End If
-        Me.Size = New Size(675, 400)
 
-
-
-        Dim Xpos As Integer = (Panel1.Width / 2) - (PictureBox1.Width / 2)
-        Me.PictureBox1.Location = New Point(Xpos, 0)
-
-        Dim Xpos1 As Integer = (pnlInstall.Width / 2) - (PictureBox4.Width / 2)
-        PictureBox4.Location = New Point(Xpos1, PictureBox4.Location.Y)
-
-        Dim Xpos2 As Integer = (pnlInstall.Width / 2) - (PictureBox3.Width / 2)
-        PictureBox3.Location = New Point(Xpos2, PictureBox3.Location.Y)
-
-        Dim Xpos3 As Integer = (pnlInstall.Width / 2) - (FlatLabel1.Width / 2)
-        FlatLabel1.Location = New Point(Xpos3, FlatLabel1.Location.Y)
-
-        Dim Xpos4 As Integer = (pnlInstall.Width / 2) - (InstallBtn.Width / 2)
-        InstallBtn.Location = New Point(Xpos4, InstallBtn.Location.Y)
-
-
-        Dim Xpos5 As Integer = (pnlInstall.Width / 2) - (uninstallBtn.Width / 2)
-        uninstallBtn.Location = New Point(Xpos5, uninstallBtn.Location.Y)
-
-
-
-        'Home
-
-        Dim Xpos6 As Integer = (pnlHome.Width / 2) - (FlatLabel6.Width / 2)
-        FlatLabel6.Location = New Point(Xpos6 - 16, FlatLabel6.Location.Y)
-
-        Dim Xpos7 As Integer = (pnlHome.Width / 2) - (FlatLabel3.Width / 2)
-        FlatLabel3.Location = New Point(Xpos7 + 33, FlatLabel3.Location.Y)
-
-        Dim Xpos9 As Integer = (pnlHome.Width / 2) - (PictureBox5.Width / 2)
-        PictureBox5.Location = New Point(Xpos9, PictureBox5.Location.Y)
-
-        Dim Xpos10 As Integer = (pnlHome.Width / 2) - (PictureBox6.Width / 2)
-        PictureBox6.Location = New Point(Xpos10, PictureBox6.Location.Y)
-
-
-        'Socials
-        Dim Xpos11 As Integer = (pnlCredits.Width / 2) - (PictureBox8.Width / 2)
-        PictureBox8.Location = New Point(Xpos11, PictureBox8.Location.Y)
-
-        Dim Xpos12 As Integer = (pnlCredits.Width / 2) - (PictureBox7.Width / 2)
-        PictureBox7.Location = New Point(Xpos12, PictureBox7.Location.Y)
-
-        'LABLES
-        Dim Xpos13 As Integer = (pnlCredits.Width / 2) - (FlatLabel2.Width / 2)
-        FlatLabel2.Location = New Point(Xpos13, FlatLabel2.Location.Y)
-
-        'Btn
-        Dim Xpos14 As Integer = (pnlCredits.Width / 2) - (FlatButton1.Width / 2)
-        FlatButton1.Location = New Point(Xpos14, FlatButton1.Location.Y)
-
-        Dim Xpos15 As Integer = (pnlCredits.Width / 2) - (FlatButton5.Width / 2)
-        FlatButton5.Location = New Point(Xpos15, FlatButton5.Location.Y)
 
         Dim usersURL As String = "http://35.225.73.246/data/AmountOfCapes.txt"
         Dim usersWc As New System.Net.WebClient
@@ -130,8 +99,6 @@ Public Class Form1
         cpeUsersLbl.Text = "Capes+ Users: " + resUsers
         FlatLabel6.Text = "Capes+ Users: " + resUsers
         FlatLabel3.Text = "Version: 1.2.0"
-
-
     End Sub
 
 
@@ -141,25 +108,14 @@ Public Class Form1
 
     Public Sub AppendLine(ByVal ip As String, ByVal url As String, Optional ByVal comment As String = "#no comment")
         Dim path As String = FileLocation()
-
-
-
-        'If Not String.IsNullOrWhiteSpace(path) Then
         IO.File.AppendAllLines(path, {String.Format("{0} {1} {2}", ip.ToString, url, comment)})
-        'End If
-
     End Sub
 
     Public Function checkIfExists()
         Dim allLines As String = ""
-
-
         For Each line As String In File.ReadLines(FileLocation)
             allLines = allLines + line + vbNewLine
         Next line
-
-
-
         If allLines.Contains("35.225.73.246 s.optifine.net #CapesPlus") Then
             Return True
         Else
@@ -168,40 +124,27 @@ Public Class Form1
     End Function
 
 
-    Public Function remove()
+    Public Sub remove()
         Dim newLines As String = ""
-
-
         For Each line As String In File.ReadLines(FileLocation)
             If line.Contains("35.225.73.246 s.optifine.net #CapesPlus") Then
 
             Else
                 newLines = newLines + line + vbNewLine
             End If
-
-
-
         Next line
-
         Dim objWriter As New System.IO.StreamWriter(FileLocation, False)
         objWriter.WriteLine(newLines)
         objWriter.Close()
-
-
-    End Function
+    End Sub
 
     Private Sub FlatButton1_Click(sender As Object, e As EventArgs) Handles InstallBtn.Click
-
         If checkIfExists() Then
             showMsg(True, "Error", "You Already Have Capes+ Installed")
-
         Else
             AppendLine("35.225.73.246", "s.optifine.net", "#CapesPlus")
             showMsg(False, "Success", "Capes+ Installed Successfully")
-
         End If
-
-
     End Sub
 
     Private Sub uninstallBtn_Click(sender As Object, e As EventArgs) Handles uninstallBtn.Click
@@ -242,7 +185,4 @@ Public Class Form1
         pnlCredits.Location = loc
     End Sub
 
-    Private Sub FormSkin1_Click(sender As Object, e As EventArgs) Handles FormSkin1.Click
-
-    End Sub
 End Class
